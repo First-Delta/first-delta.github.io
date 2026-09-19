@@ -97,12 +97,12 @@ mermaid:
 heading_anchors: true
 
 # Aux links for the upper right navigation
-#aux_links:
-#  "Just the Docs on GitHub":
-#    - "https://github.com/just-the-docs/just-the-docs"
+# aux_links:
+#  "GitHub":
+#    - "https://github.com/first-delta"
 
 # Makes Aux links open in a new tab. Default is false
-aux_links_new_tab: false
+aux_links_new_tab: true
 
 # Enable or disable the side/mobile menu globally
 # Nav menu can also be selectively enabled or disabled using page variables or the minimal layout
@@ -113,9 +113,13 @@ nav_enabled: true
 nav_sort: case_sensitive # Capital letters sorted before lowercase
 
 # External navigation links
-#nav_external_links:
-#  - title: Just the Docs on GitHub
-#    url: https://github.com/just-the-docs/just-the-docs
+nav_external_links:
+  - title: GitHub
+    url: https://github.com/first-delta
+    opens_in_new_tab: true
+  - title: HTB Profile
+    url: https://app.hackthebox.com/public/users/23677
+    opens_in_new_tab: true
 
 # Show navigation error report
 nav_error_report: true # default is false/nil.
