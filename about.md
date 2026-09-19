@@ -1,5 +1,6 @@
 ---
 title: About Me
+layout: default
 nav_order: 2
 ---
 
