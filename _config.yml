@@ -153,7 +153,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 color_scheme: dark
 
 # When commented out, callouts_level defaults to quiet for the light scheme, and loud for dark
-# callouts_level: quiet # or loud
+callouts_level: quiet
 callouts:
   highlight:
     color: yellow
