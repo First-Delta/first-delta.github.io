@@ -3,11 +3,15 @@ title: XSS
 layout: default
 has_toc: false
 parent: Web-Security
+has_toc: false
 ---
 
 # XSS
+{: .no_toc }
 Quick reference below for each type of XSS with an example.
 
+- TOC
+{:toc}
 ---
 
 ## Reflected XSS
