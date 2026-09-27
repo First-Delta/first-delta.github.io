@@ -1,5 +1,5 @@
 ---
-title: Web-Security
+title: Web Security
 layout: default
 nav_order: 0
 parent: Cheatsheets
