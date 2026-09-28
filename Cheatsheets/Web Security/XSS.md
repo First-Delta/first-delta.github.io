@@ -100,7 +100,7 @@ Using this as the query in the search box or amending it to the end of `.../?sea
 [PortSwigger Reference](https://portswigger.net/web-security/cross-site-scripting/dom-based){: .btn .btn-purple }
 </span>
 
-### Other DOM-Based exploits
+### jQuery DOM-Based exploits
 In the below example, jQuery is being used to udpate the reference `backLink` which uses a `href` attribute.
 
 ```javascript
@@ -116,4 +116,26 @@ Because the `href` is now set to the attackers input, when the button is clicked
 
 <span class="fs-2">
 [PortSwigger Reference](https://portswigger.net/web-security/cross-site-scripting/dom-based#dom-xss-in-jquery){: .btn .btn-purple }
+</span>
+
+### AngularJS DOM-Based exploits
+If AngularJS is being used, an attacker may be able to execute JavaScript code without using angled brackets (`< >`).
+
+If a site uses the `ng-app` attribute on an HTML elemt, it gets processed as AngularJS.
+
+As such, an attacker can use an input to excute JavaScript inside double curly braces that occur within HTML inside the `ng-app` directive.
+
+```javascript
+<body ng-app class="ng-scope">
+```
+The following is an example of exploit code witihin AngularJS
+
+{% raw %}
+```javascript
+{{$on.constructor('alert(1)')()}}
+```
+{% endraw %}
+
+<span class="fs-2">
+[PortSwigger Reference](https://portswigger.net/web-security/cross-site-scripting/dom-based#dom-xss-in-angularjs){: .btn .btn-purple }
 </span>
