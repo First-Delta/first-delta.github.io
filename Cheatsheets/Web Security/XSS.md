@@ -3,7 +3,6 @@ title: XSS
 layout: default
 has_toc: false
 parent: Web Security
-has_toc: false
 ---
 
 # XSS
