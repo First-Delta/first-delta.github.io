@@ -100,3 +100,21 @@ Using this as the query in the search box or amending it to the end of `.../?sea
 <span class="fs-2">
 [PortSwigger Reference](https://portswigger.net/web-security/cross-site-scripting/dom-based){: .btn .btn-purple }
 </span>
+
+### Other DOM-Based exploits
+In the below example, jQuery is being used to udpate the reference `backLink` which uses a `href` attribute.
+
+```javascript
+<a id="backLink" href="javascript:alert(0)">Back</a>
+/.../
+$(function () {
+    $('#backLink').attr("href", (new URLSearchParams(window.location.search)).get('returnPath'));
+});
+```
+As the return path is set from the URL, an attacker can modify the `href` data directly from the URL.
+
+Because the `href` is now set to the attackers input, when the button is clicked, the malicious code will run. In this example, an alert box.
+
+<span class="fs-2">
+[PortSwigger Reference](https://portswigger.net/web-security/cross-site-scripting/dom-based#dom-xss-in-jquery){: .btn .btn-purple }
+</span>
